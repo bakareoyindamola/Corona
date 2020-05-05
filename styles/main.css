@@ -1,142 +1,188 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Muli', sans-serif;
+}
+
 h2,
+h3,
 p {
   margin: 0;
-  padding: 0;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  padding: 0;
-  margin: 0;
-  background: #212e37;
-  color: white;
-}
-
-nav,
-form {
-  width: 90%;
-  max-width: 1400px;
-  margin: auto;
+main {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background-color: #302f3f;
+  background-image: url("../images/Group 19.png"), url("../images/index-eclipse.png"), url("../images/Group 20.png");
+  background-repeat: no-repeat;
+  background-position: top 13.1rem left 8rem,
+ bottom 0 left 0,
+ bottom 4.1rem right 5.1rem;
+  background-attachment: fixed;
 }
 
-.navigation-wrapper {
-  background-color: #2b3743;
+@media screen and (max-width: 1303px) {
+  main {
+    background-position: top 33rem left 2.94rem,
+ top 0 left 0,
+ bottom 4.1rem right 5.1rem;
+  }
 }
 
-.navigation-wrapper nav {
-  padding: 20px 0;
+@media screen and (max-width: 1185px) {
+  main {
+    background-position: top 33rem left 2.94rem,
+ top 0 left 0,
+ bottom -1rem right -2rem;
+  }
 }
 
-.navigation-wrapper nav p {
+@media screen and (max-width: 920px) {
+  main {
+    background-position: top 35rem left 0,
+ top 0 left 0,
+ bottom -2rem right -2rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  main {
+    background-image: url("../images/index-eclipse.png"), url("../images/Group 20.png");
+    background-position: top 0 left 0,
+ bottom -2rem right -2rem;
+  }
+}
+
+main h2 {
+  font-weight: 900;
+  font-size: 4.5rem;
+  line-height: 90px;
+  margin-bottom: 20px;
+}
+
+main p {
+  font-size: 1.125rem;
+  line-height: 23px;
+  margin-bottom: 28px;
+}
+
+main input {
+  min-width: 302px;
+  padding: 1rem 3.63rem;
+  background: #3D3C4B;
+  outline: none;
+  border: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFF;
+}
+
+main input::-webkit-input-placeholder {
+  color: #6A6974;
+}
+
+main input:-ms-input-placeholder {
+  color: #6A6974;
+}
+
+main input::-ms-input-placeholder {
+  color: #6A6974;
+}
+
+main input::placeholder {
+  color: #6A6974;
+}
+
+main button {
+  text-decoration: none;
+  font-family: 'Muli', sans-serif;
+  min-width: 302px;
+  text-align: center;
+  background-color: #00BFA6;
+  padding: 14px 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 23px;
+  color: black;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+main button[disabled]:hover {
+  cursor: not-allowed;
+}
+
+main .agree {
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0;
+  text-align: center;
+  color: #EB5757;
+}
+
+main .agreeBox {
+  margin-bottom: 20px;
+}
+
+main .pop-up {
+  position: absolute;
+  text-align: center;
+  background-color: #00BFA6;
+  padding: 40px;
+  color: black;
+  display: none;
+}
+
+@media screen and (max-width: 413px) {
+  main .pop-up h1 {
+    font-size: 1.5rem;
+  }
+}
+
+main .pop-up h1,
+main .pop-up p {
+  max-width: 90%;
+}
+
+main .pop-up p {
+  text-align: left;
+}
+
+main .pop-up .cancel {
+  position: absolute;
+  right: 30px;
+  top: 5%;
+  font-weight: 900;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
-.navigation-wrapper nav p i {
-  margin-right: 10px;
+@media screen and (max-width: 413px) {
+  main .pop-up .cancel {
+    top: 6%;
+  }
 }
-
-form {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-form .search-bar {
-  position: relative;
-  width: 400px;
-}
-
-form .search-bar i {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-}
-
-form .search-bar input {
-  width: 100%;
-  padding: 15px 20px 15px 50px;
-  background-color: #2b3743;
-  color: white;
-  border: none;
-  outline: none;
-  border-radius: 4px;
-}
-
-form select {
-  background-color: #2b3743;
-  padding: 15px;
-  border: none;
-  outline: none;
-  border-radius: 4px;
-  color: white;
-}
-
-.countries-info {
-  width: 90%;
-  max-width: 1400px;
-  margin: auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
-  grid-gap: 60px;
-  margin-top: 50px;
-}
-
-.countries-info img {
-  max-width: 100%;
-}
-
-.countries-info .country-info {
-  background-color: #2b3743;
-}
-
-.countries-info .country-info .img-wrapper {
-  width: 100%;
-  height: 150px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.countries-info .country-info .country-text {
-  padding: 20px 20px 30px 20px;
-}
-
-.countries-info .country-info .country-text h2 {
-  font-size: 1.125rem;
-  margin-bottom: 15px;
-}
-
-.countries-info .country-info .country-text p {
-  font-weight: 600;
-  line-height: 25px;
-}
-
-.countries-info .country-info .country-text p span {
-  font-weight: 500;
-}
-
-.active {
-  background-color: #fafafa;
-  color: black;
-}
-
-.active-nav {
-  background-color: white;
-}
-/*# sourceMappingURL=main.css.map */

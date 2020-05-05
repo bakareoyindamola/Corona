@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="styles/game.css" >
+  </head>
+  <body>
+    <div class="loader"></div>
+    <main class="game">
+        <div class="score-board">
+            <p>Score</p>
+            <div class="score">0</div>
+        </div>
+
+        <div class="quiz">
+            <h2 class="question"></h2>
+            <div class="answers">
+                <div class="answer" data-number="1"></div>
+                <div class="answer" data-number="2"></div>
+                <div class="answer" data-number="3"></div>
+                <div class="answer" data-number="4"></div>
+            </div>
+        </div>
+
+        <a class="next">Next</a>
+
+        <div class="pop-up">
+          <h2 class="pop-text">Bro, you dull o!</h2>
+          <p>Out of 2 questions you no fit score 1. Better go and collect your school fees back.</p>
+          <button class="jp">JAPA!!!</button>
+          <button class="continue">Continue embrassing yourself</button>
+        </div>
+    </main>
+    <script src="script/game.js"></script>
+  </body>
+</html>

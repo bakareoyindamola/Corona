@@ -2,39 +2,36 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Rest Countries Api</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles/main.css" >
   </head>
   <body>
-      <section class="navigation-wrapper">
-          <nav>
-              <h2>Where in the World?</h2>
-
-              <p id="switch"><i class="fas fa-moon"></i>Dark Mode</p>
-          </nav>
-      </section>
-      
-      <form id="search-country">
-        <div class="search-bar">
-          <i class="fab fa-searchengin"></i>
-          <input type="text" placeholder="Search for a country">
-        </div>
-
-        <select>
-          <option>Filter by Region</option>
-          <option>Africa</option>
-          <option>America</option>
-          <option>Asia</option>
-          <option>Europe</option>
-          <option>Oceania</option>
-        </select>
-      </form>
-
-      <section class="countries-info">
+    <main>
+        <h2 class="question">IQ Test</h2>
+        <p>Do you think you're smart?</p>
+        <!-- <p>Agree to the terms and condition to proceed</p> -->
         
-      </section>
+        <form id="username">
+          <input type="text" id="name" placeholder="What’s your name Einstient?">
+          <div class="agreeBox">
+            <p class="agree">Click to view the Terms and Condition</p>
+          </div>
+        </form>
+        <button href="homepage.html" class="enter" disabled>ENTER</button>
 
-    <script src="scripts/main.js"></script>
+        <div class="pop-up">
+          <span class="cancel">X</span>
+          <h1>Terms and condition</h1>
+          <p>I don't care about your mental health</p>
+          <p>Questions that can make you think about your existence is what I am using to test your low IQ</p>
+          <p>If you fail the first two questions, you'll be warned</p>
+          <p>If you fail the first three questions, you'll be banned from your current session.</p>
+          <p>To complete this IQ test successuful, you've to pass all questions correctly</p>
+          <p>Lastly, you might experience dangerous thing.</p>
+        </div>
+    </main>
   </body>
+
+  <script src="script/main.js"></script>
 </html>
